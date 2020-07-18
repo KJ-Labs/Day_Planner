@@ -2,20 +2,19 @@ var appointText = "";
 var appointTime = "";
 var currentContainer;
 let currenthour = new Date().getHours();
-var ID = $(".container").attr("id");
 
+console.log(currenthour);
 
+//past = grey, current = mint, future = blue
 
-
-var today = new Date().getHours();
 $(".textarea").each(function () {
-  if (currenthour < 17 ) {
-    $(this).addClass("past");
-    console.log(ID);
-  }else if (currenthour = ID) {
-    $(this).addClass("present");
-  } else {
+  if (currenthour < $(this).attr("id") ) {
     $(this).addClass("future");
+  }else if (currenthour > $(this).attr("id")) {
+    $(this).addClass("past");
+  }
+    else {
+    $(this).addClass("present");
   }
 })
 
