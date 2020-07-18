@@ -3,6 +3,9 @@ var appointTime = "";
 var currentContainer;
 let currenthour = new Date().getHours();
 
+var containervalue = document.getElementById('.ininputTextput');
+var containertime = $(".id").val();
+
 
 console.log(currenthour);
 
@@ -19,21 +22,12 @@ $(".textarea").each(function () {
   }
 })
 
-
-
 $(document).ready(function () {
-  var savesnotesbtn = document.getElementById("savebutton");
-
-  //FILL TEXT AREAS WITH NOTES
-  for (var i = 9; i <= 17; i++) {
-    $("#textarea" + i + "inputText").val(localStorage.getItem("textarea" + i));
-    console.log('button clicked?')
-  }
-
-  function saveNotes() {
-    for (var i = 1; i < 11; i++) {
-      localStorage.setItem("textarea" + i, $("#textarea" + i + "inputText").val());
-    }
-  };
-  savesnotesbtn.addEventListener("click", saveNotes);
+  $(".saveBtn").on("click", function() {
+    var textvalue = $(this).siblings('.inputText').find('textarea').val();
+    var timevalue =  $(this).siblings('.inputText').find('textarea').attr("id");
+    console.log(textvalue);
+    console.log(timevalue);
+  });
 });
+
