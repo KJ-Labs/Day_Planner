@@ -1,16 +1,19 @@
 var appointText = "";
 var appointTime = "";
-var currentDate;
-var currentTime;
 var currentContainer;
-var tempArray = [];
-var storedAppointments;
-var returnedAppointments;
+let currenthour = new Date().getHours();
 
 
-console.log(new Date().getHours())
+console.log(currenthour);
 
 
-$(".textarea").each(function() {
-  $(this).addClass("future");
-})
+
+if (currenthour > 17) {
+  $("#9").addClass("past");
+}
+  else if (now < 17) {
+      $("#9").addClass("future");
+}
+else {
+  $("#9").addClass("present");
+}
