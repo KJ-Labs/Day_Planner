@@ -26,8 +26,15 @@ $(document).ready(function () {
   $(".saveBtn").on("click", function() {
     var textvalue = $(this).siblings('.inputText').find('textarea').val();
     var timevalue =  $(this).siblings('.inputText').find('textarea').attr("id");
-    console.log(textvalue);
-    console.log(timevalue);
+    localStorage.setItem(timevalue, textvalue);
+    console.log(localStorage.getItem( '10'));
+    console.log(localStorage.getItem( '11'));
+
+    if ($("id=timevalue")){
+       $(this).siblings('.inputText').find('textarea') = textvalue;
+    }
+
+
   });
 });
 
