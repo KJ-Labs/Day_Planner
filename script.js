@@ -17,7 +17,6 @@ window.onbeforeunload = function(e) {
   e.preventDefault();
 }
 
-
 var containervalue = document.getElementById('.ininputTextput');
 var containertime = $(".id").val();
 
@@ -34,24 +33,12 @@ $(".textarea").each(function () {
   }
 })
 
-localStorage.clear();
+
 $(document).ready(function () {
   $(".saveBtn").on("click", function() {
     var textvalue = $(this).siblings('.inputText').find('textarea').val();
     var timevalue =  $(this).siblings('.inputText').find('textarea').attr("id");
     localStorage.setItem(timevalue, textvalue);
-
-    console.log(localStorage.getItem('9'));
-    console.log(localStorage.getItem('10'));
-    console.log(localStorage.getItem('11'));
-    console.log(localStorage.getItem('12'));
-    console.log(localStorage.getItem('13'));
-    console.log(localStorage.getItem('14'));
-    console.log(localStorage.getItem('15'));
-    console.log(localStorage.getItem('16'));
-    console.log(localStorage.getItem('17'));
-
-    timeblock9am = localStorage.getItem('9');
 
     $(textvalue).each(function () {
       if (textvalue.length = 0) {
@@ -62,6 +49,15 @@ $(document).ready(function () {
   });
 
 });
+$("#9").val(localStorage.getItem("9"))
+$("#10").val(localStorage.getItem("10"))
+$("#11").val(localStorage.getItem("11"))
+$("#12").val(localStorage.getItem("12"))
+$("#13").val(localStorage.getItem("13"))
+$("#14").val(localStorage.getItem("14"))
+$("#15").val(localStorage.getItem("15"))
+$("#16").val(localStorage.getItem("16"))
+$("#17").val(localStorage.getItem("17"))
 
 });
 
