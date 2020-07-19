@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta description  = "Purpose is to create a Day Planner that changes color depending on if the appointment time has already passed."> 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
@@ -15,15 +16,17 @@
     <title>Work Day Scheduler</title>
 </head>
 
-<body>
+<!-- Header Values and Refresh Button so user can use it multiple days and only clear it when they want to.  -->
+
     <header class="jumbotron">
         <h1 class="display-3">Work Day Scheduler</h1>
         <p class="lead">Plan your Workday</p>
         <p id="currentDay" class="lead"></p>
+        <button class="button-xsmall pure-button" id = 'refreshbutton'>Clear Schedule</button>
     </header>
     </div>
 
-   <div class = 'FormContainer' >
+    <!-- Containers that have a unique id, so that they can be referenced by timestamp -->
     <div class="container" >
         <div class="row h-100">
             <p class="col-sm-1 my-auto time-block">9:00 A.M.</p>
@@ -31,6 +34,7 @@
             <button class="saveBtn col-sm-2" id = 'savebutton'>Save</button>
         </div>
     </div>
+       <!-- Duplicated information below.  -->
     <div class="container" >
         <div class="row h-100">
             <p class="col-sm-1 my-auto time-block">10:00 A.M.</p>
@@ -86,8 +90,6 @@
             <div class="inputText col-sm-8"><textarea class="form-control textarea" rows="3" id="17" ></textarea></div>
             <button class="saveBtn col-sm-2" id = 'savebutton'>Save</button>
         </div>
-    </div>
-  
 </div>
     <script src="script.js"></script>
 </body>

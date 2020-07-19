@@ -31,10 +31,7 @@ body {
     border-bottom: 10px solid black;
   }
   
-  .description{
-    white-space: pre-wrap;
-  }
-  
+
   .time-block{
     text-align: center;
     border-radius: 15px;
@@ -79,4 +76,7 @@ body {
     font-size: 20px;
     transition: all .3s ease-in-out;
   }
-  
+
+  .button-xsmall {
+      font-size: 70%;
+  }
