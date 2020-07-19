@@ -51,17 +51,17 @@ body {
   
   .past {
     background-color:#B9B7BD;
-    color: white;
+    color: black;
   }
 
   .present {
     background-color: #B4F8C8;
-    color: white;
+    color: black;
   }
   
   .future {
     background-color:#A0E7E5;
-    color: white;
+    color: black;
   }
   
   .saveBtn {

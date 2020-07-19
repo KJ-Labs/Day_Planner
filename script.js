@@ -1,6 +1,11 @@
 
 var currentContainer;
 let currenthour = new Date().getHours();
+n =  new Date();
+y = n.getFullYear();
+m = n.getMonth() + 1;
+d = n.getDate();
+let currentDay = document.getElementById("currentDay").innerHTML = m + "/" + d + "/" + y;
 
 
 //Clears the current values, so that the user can use the planner the next day. 
@@ -50,5 +55,8 @@ $(document).ready(function () {
   $("#17").val(localStorage.getItem("17"))
 
 });
+
+
+
 
 
