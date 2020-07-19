@@ -1,6 +1,6 @@
 # Day_Planner
 
-The Day Planner activity was to create a day planner that showed the current date and had time blocks for the standard working hours of 9 A.M. to 5 P.M.
+The Day Planner challenge was to create a day planner that showed the current date and had time blocks for the standard working hours of 9 A.M. to 5 P.M.
 
 The user is able to click into an activity block and type their schedule. 
 
