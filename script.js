@@ -21,7 +21,7 @@ $(".textarea").each(function () {
     $(this).addClass("present");
   }
 })
-
+localStorage.clear();
 $(document).ready(function () {
   $(".saveBtn").on("click", function() {
     var textvalue = $(this).siblings('.inputText').find('textarea').val();
@@ -30,11 +30,7 @@ $(document).ready(function () {
     console.log(localStorage.getItem( '10'));
     console.log(localStorage.getItem( '11'));
 
-    if ($("id=timevalue")){
-       $(this).siblings('.inputText').find('textarea') = textvalue;
-    }
-
-
+    $(this).siblings('.inputText').find('textarea').val(localStorage.getItem( '10'));
   });
 });
 
