@@ -10,17 +10,14 @@ let currentDay = document.getElementById("currentDay").innerHTML = m + "/" + d +
 
 //Clears the current values, so that the user can use the planner the next day. 
 $( ".button-xsmall" ).click(function() {
-  localStorage.clear();
-  $("#9").val(""); 
-  $("#10").val("");
-  $("#11").val("");
-  $("#12").val("");
-  $("#13").val("");
-  $("#14").val("");
-  $("#15").val("");
-  $("#16").val("");
-  $("#17").val("");
+  cleardata();
 });
+//data starts at 9 am then continues using military hours
+function cleardata() {
+  for (var i = 9; i <= 17; i++) {
+      $("#" + i).val(""); 
+  }
+}
 
 //Changes the box different colors depending on the current time. 
 $(".textarea").each(function () {
@@ -44,19 +41,19 @@ $(document).ready(function () {
   });
 
   //Prints it back to the page, so then you can see it even if you refresh. 
-  $("#9").val(localStorage.getItem("9"))
-  $("#10").val(localStorage.getItem("10"))
-  $("#11").val(localStorage.getItem("11"))
-  $("#12").val(localStorage.getItem("12"))
-  $("#13").val(localStorage.getItem("13"))
-  $("#14").val(localStorage.getItem("14"))
-  $("#15").val(localStorage.getItem("15"))
-  $("#16").val(localStorage.getItem("16"))
-  $("#17").val(localStorage.getItem("17"))
+
 
 });
 
+//Loop to log text input to local storage to prevent refreshing removing the information. 
+function renderText() {
+  //data starts at 9 am then continues using military hours
+  for (var i = 9; i <= 17; i++) {
+      $("#" + i).val(localStorage.getItem(i));
+  }
+}
 
+renderText();
 
 
 
