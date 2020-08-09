@@ -12,6 +12,10 @@ If the user wants to clear the data for a new day, they can simply press the cle
 
 The time blocks will turn different colors depending on if the time is before, after or the same as the current hour, so the user can keep track of their day. 
 
+Technologies used: HTML, CSS, Javascript
+
+License: MIT
+
 Link to Website: https://kj-labs.github.io/Day_Planner/
 
 Screenshots:![Alt text](https://github.com/KJ-Labs/Day_Planner/blob/master/screenshots.PNG "Screenshots")
